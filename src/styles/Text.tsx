@@ -1,5 +1,6 @@
-import { styled } from '@/styles/stitches.config';
+import { styled } from '@/styles/stitches.config'
 import { colors } from '@/styles/Global'
+
 
 const headingsDefaultConfig = {
     fontFamily: "$titles"
@@ -9,7 +10,7 @@ const bodyDefaultConfig = {
     fontFamily: "$texts"
 }
 
-export const Text = styled("p", {
+const Text = styled('p', {
     color: "$grey1",
     fontSize: "$text1",
     fontWeight: 400,
@@ -28,19 +29,19 @@ export const Text = styled("p", {
             heading2: {
                 fontSize: "$title2",
                 lineHeight: "$title2",
-                fontWeight: 600,
+                fontWeight: 700,
                 ...headingsDefaultConfig
             },
             heading3: {
                 fontSize: "$title3",
                 lineHeight: "$title3",
-                fontWeight: 500,
+                fontWeight: 700,
                 ...headingsDefaultConfig
             },
             heading4: {
                 fontSize: "$title4",
                 lineHeight: "$title4",
-                fontWeight: 500,
+                fontWeight: 700,
                 ...headingsDefaultConfig
             },
             body1: {
@@ -57,3 +58,5 @@ export const Text = styled("p", {
         ...colors
     }
 })
+
+export { Text }

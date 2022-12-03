@@ -1,16 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import { GlobalStyle } from '@/styles/Global';
-import { Home } from '@/pages/home';
-import { NavBar } from '@/components/Navbar';
-import { Footer } from '@/components/Footer';
+import { GlobalStyle } from '@/styles/Global'
+import { NavBar } from '@/components/Navbar'
+import { Footer } from '@/components/Footer'
+import ReactDOM from 'react-dom/client'
+import { Home } from '@/pages/home'
+import React from 'react'
+
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <GlobalStyle>
-        <NavBar />
-        <Home />
-        <Footer />
-    </GlobalStyle>
-  </React.StrictMode>
+  	<React.StrictMode>
+    	<GlobalStyle>
+        	<NavBar />
+        	<Home />
+        	<Footer />
+    	</GlobalStyle>
+  	</React.StrictMode>
 )

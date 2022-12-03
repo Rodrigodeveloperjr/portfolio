@@ -1,104 +1,100 @@
-import { useState } from "react";
-import useMedia from "use-media";
-import { userData } from "@/utils/userData";
+import { user_data } from '@/utils/userData'
+import useMedia from 'use-media'
+import { useState } from 'react'
 
 import {
   Navbar as NavbarWrapper,
   LogoTipo,
-  LogoTipoImage,
   LogoTipoText,
   NavbarLinks,
   NavbarMobileArea,
-} from "./style";
+} from './style'
 
-import { FaGithub, FaLinkedinIn, FaBars } from "react-icons/fa";
-import { IoClose } from "react-icons/io5";
-import { Button } from "@/styles/Buttons";
-import { Container } from "@/styles/Global";
+import { FaBars } from 'react-icons/fa'
+import { Container } from '@/styles/Global'
+import { IoClose } from 'react-icons/io5'
+import { Button } from '@/styles/Buttons'
 
 export interface MenuButtonOpen {
-  open: Boolean;
-  setOpen: (value: Boolean) => void;
+	open: Boolean
+	setOpen: (value: Boolean) => void
 }
 
-export const NavBar = (): JSX.Element => {
-  const isWide = useMedia({ maxWidth: "991px" });
+const NavBar = (): JSX.Element => {
 
-  document.title = userData.nameUser;
+	const isWide = useMedia({ maxWidth: "991px" })
 
-  const [open, setOpen] = useState(false);
+	document.title = user_data.name_user
 
-  const OpenMenu = () => {
-    setOpen(!open);
-  };
+	const [open, setOpen] = useState(false)
 
-  return (
-    <NavbarWrapper>
-      <Container>
-        <NavbarMobileArea>
-          <LogoTipo>
-            <LogoTipoImage
-              src={`https://github.com/${userData.githubUser}.png`}
-              alt={userData.nameUser}
-              title={userData.nameUser}
-              width={"48px"}
-              height={"48px"}
-            />
-            <LogoTipoText>{userData.nameUser}</LogoTipoText>
-          </LogoTipo>
-          {isWide && (
-            <Button
-              type="icon"
-              onClick={OpenMenu}
-              aria-label={!open ? "Abrir Menu" : "Fechar Menu"}
-            >
-              {!open ? <FaBars /> : <IoClose />}
-            </Button>
-          )}
-        </NavbarMobileArea>
-        {isWide ? open && <NavLinks /> : <NavLinks />}
-      </Container>
-    </NavbarWrapper>
-  );
-};
+	const OpenMenu = () => {
+		setOpen(!open)
+	};
 
-export const NavLinks = (): JSX.Element => {
-  return (
-    <NavbarLinks>
-      {userData.whatsappNumber && (
-        <Button
-          type="primary"
-          as="a"
-          target="_blank"
-          href={`https://api.whatsapp.com/send?phone=+55${userData.whatsappNumber}&text=Ol%C3%A1%2C%20venho%20por%20meio%20do%20seu%20portf%C3%B3lio%20na%20internet%2C%20gostaria%20de%20conhecer%20melhor%20seus%20servi%C3%A7os`}
-        >
-          Falar no whatsapp
-        </Button>
-      )}
+	return (
+		<NavbarWrapper>
+		<Container>
+			<NavbarMobileArea>
+			<LogoTipo>
+				<LogoTipoText>{ user_data.name_user }</LogoTipoText>
+			</LogoTipo>
+			{
+			isWide && (
+				<Button
+				type="icon"
+				onClick={OpenMenu}
+				aria-label={ !open ? 'Abrir Menu' : 'Fechar Menu' }
+				>
+				{!open ? <FaBars /> : <IoClose />}
+				</Button>
+			)
+			}
+			</NavbarMobileArea>
+			{ isWide ? open && <NavLinks /> : <NavLinks /> }
+		</Container>
+		</NavbarWrapper>
+	)
+}
 
-      {userData.githubUser && (
-        <Button
-          type="icon"
-          target="_blank"
-          as="a"
-          aria-label="Github"
-          href={`https://github.com/${userData.githubUser}`}
-        >
-          <FaGithub />
-        </Button>
-      )}
+const NavLinks = (): JSX.Element => {
+	return (
+		<NavbarLinks>
+		<Button
+			type="btLink"
+			as="a"
+			color="grey4"
+			href={`#home`}
+		>
+			Home
+		</Button>
+		<Button
+			type="btLink"
+			as="a"
+			color="grey4"
+			href={`#projects`}
+		>
+			Projects
+		</Button>
+		<Button
+			type="btLink"
+			as="a"
+			color="grey4"
+			href={`#contact`}
+		>
+			Contact
+		</Button>
+		<Button
+			type="btLink"
+			as="a"
+			color="grey4"
+			href={`#social-media`}
+		>
+			Social Media
+		</Button>
+	
+		</NavbarLinks>
+	)
+}
 
-      {userData.linkedinUser && (
-        <Button
-          type="icon"
-          target="_blank"
-          as="a"
-          aria-label="LinkedIn"
-          href={`https://www.linkedin.com/in/${userData.linkedinUser}`}
-        >
-          <FaLinkedinIn />
-        </Button>
-      )}
-    </NavbarLinks>
-  );
-};
+export { NavBar, NavLinks }

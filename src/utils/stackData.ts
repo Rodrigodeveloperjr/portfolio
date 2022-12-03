@@ -1,39 +1,66 @@
-import imgHTML from "../public/static/img/stack/html.svg";
-import imgCSS from "../public/static/img/stack/css.svg";
-import imgJS from "../public/static/img/stack/js.svg";
-import imgNode from "../public/static/img/stack/node.svg";
-import imgStyled from "../public/static/img/stack/styled.svg";
-import imgReact from "../public/static/img/stack/react.svg";
-import { FaVuejs } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
-import { FaDocker } from "react-icons/fa";
+import { SiJavascript, SiStyledcomponents, SiPostgresql, SiTypescript } from 'react-icons/si'
+import { DiCss3, DiNodejs, DiDjango, DiMysql, DiDocker } from 'react-icons/di'
+import { FaReact, FaGithub, FaPython } from 'react-icons/fa'
+import { AiFillHtml5 } from 'react-icons/ai'
 
-export const stackData = [
-  {
-    title: "HTML",
-    img: imgHTML,
-  },
-  {
-    title: "CSS",
-    img: imgCSS,
-  },
-  {
-    title: "JS",
-    img: imgJS,
-  },
-  {
-    title: "Node JS",
-    img: imgNode,
-  },
-  {
-    title: "Styled Components",
-    img: imgStyled,
-  },
-  {
-    title: "React",
-    img: imgReact,
-  },
-  { title: "Vuejs", img: FaVuejs },
-  { title: "TypeScript", img: SiTypescript },
-  { title: "Docker", img: FaDocker },
-];
+
+const stack_data = [
+	{
+		title: 'HTML',
+		img: AiFillHtml5,
+	},
+	{
+		title: 'CSS',
+		img: DiCss3,
+	},
+	{
+		title: 'JavaScript',
+		img: SiJavascript,
+	},
+	{
+		title: 'TypeScript',
+		img: SiTypescript
+	},
+	{
+		title: 'React',
+		img: FaReact,
+	},
+	{ 
+		title: 'React Native',
+		img: FaReact
+	},
+	{
+		title: 'Styled Components',
+		img: SiStyledcomponents,
+	},
+	{
+		title: 'Node JS',
+		img: DiNodejs,
+	},
+	{
+		title: 'Python',
+		img: FaPython
+	},
+	{
+		title: 'Django',
+		img: DiDjango
+	},
+	{
+		title: 'MySQL',
+		img: DiMysql
+	},
+	{
+		title: 'Postgresql',
+		img: SiPostgresql
+	},
+	{
+		title: 'Git Hub',
+		img: FaGithub
+	},
+	{
+		title: 'Docker',
+		img: DiDocker
+	},
+]
+
+export { stack_data }

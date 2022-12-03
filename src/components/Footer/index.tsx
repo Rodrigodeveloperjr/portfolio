@@ -1,16 +1,46 @@
-import { Container } from '@/styles/Global'
-import { Text } from '@/styles/Text'
-import { Button } from '@/styles/Buttons'
+import { FaLinkedinIn, FaInstagram } from 'react-icons/fa'
+import { Container, Flex, Box } from '@/styles/Global'
 import { Footer as FooterWrapper } from './style'
-import { FaAngleUp } from 'react-icons/fa'
+import { UserImage } from '@/pages/home/style'
+import { user_data } from '@/utils/userData'
+import { HandEffect } from '../HandEffect'
+import { Button } from '@/styles/Buttons'
+import { Text } from '@/styles/Text'
 
-export const Footer = (): JSX.Element =>{
-    return (
-        <FooterWrapper>
-            <Container>
-                <Button onClick={() => { window.scrollTo(0,0) }} aria-label="Voltar para o topo do site" type="circle"><FaAngleUp/></Button>
-                <Text type="body1" color="grey5">✋ Obrigado por acessar!</Text>
-            </Container>
-        </FooterWrapper>
-    )
+
+const Footer = (): JSX.Element => {
+	return (
+		<FooterWrapper id="social-media">
+		<Container>
+			<Flex>
+			<UserImage
+				src={`https://github.com/${ user_data.github_user }.png`}
+				alt={ user_data.name_user }
+				title={ user_data.name_user }
+				width={"70px"}
+				height={"70px"}
+			/>
+			<Box css={{ marginLeft: "$2" }}>
+				<Text type="heading4" color="grey5" css={{ marginBottom: "$2" }}>
+				Thank you!{" "}
+				<HandEffect />
+				</Text>
+				<Text type="body1" color="grey2">
+				Follow me on my social networks and let's talk
+				</Text>
+			</Box>
+			</Flex>
+			<Flex>
+			<Button className="instagram" type="circle" as="a" target="_blank" href={`https://instagram.com/${ user_data.instagram_user }`}>
+				<FaInstagram />
+			</Button>
+			<Button className="linkedin" type="circle" as="a" target="_blank" href={`https://linkedin.com/in/${ user_data.linkedin_user }`}>
+				<FaLinkedinIn />
+			</Button>
+			</Flex>
+		</Container>
+		</FooterWrapper>
+	)
 }
+
+export { Footer }

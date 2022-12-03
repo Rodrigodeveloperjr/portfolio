@@ -1,104 +1,113 @@
 // Styles
-import { Container } from "@/styles/Global";
-import { Text } from "@/styles/Text";
-import { Button } from "@/styles/Buttons";
+import { Container, Flex } from '@/styles/Global'
+import { Button } from '@/styles/Buttons'
+import { Text } from '@/styles/Text'
 
 // Components
-import { Stack } from "@/components/Stack";
-import { Project } from "@/components/Project";
+import { Contacts } from '@/components/Contacts'
+import { Project } from '@/components/Project'
+import { Stack } from '@/components/Stack'
 
 // Data
-import { stackData } from "@/utils/stackData";
-import { userData } from "@/utils/userData";
+import { stack_data } from '@/utils/stackData'
+import { user_data } from '@/utils/userData'
+
+import { FaGithub } from 'react-icons/fa'
 
 // Page Style
 import {
   Header,
   HeaderContent,
   HeaderButtonsArea,
-  StackSection,
+  UserImage,
   StackCards,
   ProjectsArea,
   ProjectsAreaSocialMediaMessage,
-  ProjectsAreaContent,
   ProjectAreaWrapperColumns,
-} from "./style";
+  ProjectsAreaContent,
+} from './style'
 
+import { HandEffect } from '@/components/HandEffect'
 
-export const Home = (): JSX.Element => {
-  return (
-    <main>
-      <Header>
-        <Container>
-          <HeaderContent>
-            <Text as="h1" type="heading1" color="grey5">
-              Criando experiências por meio da tecnologia{" "}
-            </Text>
-            <Text type="body1" color="grey6">
-              Sou estudante de programação na Kenzie Academy Brasil, participei
-              de diversos projetos resolvendo problemas de alto nível e
-              desenvolvendo habilidades
-            </Text>
-            <HeaderButtonsArea>
-              <Button as="a" href="#projetos">
-                Projetos
-              </Button>
-              <Button as="a" href="#tecnologias" type="btLink" color="grey5">
-                Tecnologias
-              </Button>
-            </HeaderButtonsArea>
-          </HeaderContent>
-        </Container>
-      </Header>
-      <StackSection id="tecnologias">
-        <Container>
-          <Text as="h4" type="heading3" color="grey1">
-            Ferramentas que domino
-          </Text>
-          <StackCards>
-            {stackData.map((stack, index) => (
-              <Stack key={index} title={stack.title} icon={stack.img} />
-            ))}
-          </StackCards>
-        </Container>
-      </StackSection>
-      <ProjectsArea id="projetos">
-        <Container>
-          <ProjectAreaWrapperColumns>
-            <ProjectsAreaSocialMediaMessage>
-              <Text as="h2" type="heading4" color="grey1">
-                Vamos trocar uma ideia?
-              </Text>
-              <Text as="p" type="body1" color="grey2">
-                No linkedIn sempre estou compartilhando meus processos diários
-                para desenvolver esses projetos e estou disposto a trocar
-                algumas ideias por lá
-              </Text>
-              <Button
-                type="primary"
-                target="_blank"
-                as="a"
-                href={`https://www.linkedin.com/in/${userData.linkedinUser}`}
-              >
-                Acessar perfil no LinkedIn
-              </Button>
-            </ProjectsAreaSocialMediaMessage>
-            <ProjectsAreaContent>
-              <Text type="body1" color="grey2" css={{ marginBottom: "$2" }}>
-                Projetos
-              </Text>
-              <Text as="h3" type="heading2" color="grey1">
-                Originalidade e{" "}
-                <Text as="span" color="brand1" type="heading2">
-                  dedicação
-                </Text>{" "}
-                em cada detalhe
-              </Text>
-              <Project />
-            </ProjectsAreaContent>
-          </ProjectAreaWrapperColumns>
-        </Container>
-      </ProjectsArea>
-    </main>
-  );
-};
+const Home = (): JSX.Element => {
+	return (
+		<main id="home">
+		<Header>
+			<Container>
+			<HeaderContent>
+				<Flex>
+				<UserImage
+					src={`https://github.com/${ user_data.github_user }.png`}
+					alt={ user_data.name_user }
+					title={ user_data.name_user }
+					width={"48px"}
+					height={"48px"}
+				/>
+				<Text color="grey4" css={{ marginLeft: "$2" }}>
+					Hello, my name is { user_data.name_user } <HandEffect />
+				</Text>
+				</Flex>
+				<Text as="h1" type="heading1" color="grey5">
+				I{" "}
+				<Text as="span" type="heading1" color="brand1">
+					love
+				</Text>{" "}
+				creating and{" "}
+				<Text as="span" type="heading1" color="brand1">
+					developing
+				</Text>{" "}
+				projects
+				</Text>
+				<Text type="body1" color="grey2">
+				Discover here in this environment, created especially for you, all
+				my projects and technologies
+				</Text>
+				<HeaderButtonsArea>
+				<Button as="a" type="primary" href="#projects">
+					See Projects
+				</Button>
+				<Button
+					as="a"
+					type="circle"
+					target="_blank"
+					href={`https://github.com/${ user_data.github_user }`}
+				>
+					<FaGithub />
+				</Button>
+				</HeaderButtonsArea>
+				<StackCards>
+				{
+				stack_data.map((stack, index) => (
+					<Stack key={ index } title={ stack.title } icon={ stack.img } />
+				))
+				}
+				</StackCards>
+			</HeaderContent>
+			</Container>
+		</Header>
+		<ProjectsArea id="projects">
+			<Container>
+			<ProjectAreaWrapperColumns>
+				<ProjectsAreaSocialMediaMessage>
+				<Text as="h2" type="heading4" color="grey4">
+					My projects
+				</Text>
+				<Text as="p" type="body1" color="grey2">
+					Projects created at{" "}
+					<Text as="span" color="brand5">
+					Kenzie Academy
+					</Text>
+				</Text>
+				</ProjectsAreaSocialMediaMessage>
+				<ProjectsAreaContent>
+				<Project />
+				</ProjectsAreaContent>
+			</ProjectAreaWrapperColumns>
+			</Container>
+		</ProjectsArea>
+		<Contacts />
+		</main>
+	)
+}
+
+export { Home }

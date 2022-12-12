@@ -50,7 +50,8 @@ const StackCard = styled('div', {
 		top: 0,
 		transform: "translateY(-140%)",
 		animation: `${ scaleUp } 200ms`,
-		filter: "drop-shadow(0 0 2em #868E96)"
+		filter: "drop-shadow(0 0 2em #868E96)",
+		transition: "background-color 300ms"
 		},
 	},
 })

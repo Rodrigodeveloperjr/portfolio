@@ -78,7 +78,7 @@ const Home = (): JSX.Element => {
 				<StackCards>
 				{
 				stack_data.map((stack, index) => (
-					<Stack key={ index } title={ stack.title } icon={ stack.img } />
+					<Stack key={ index } title={ stack.title } icon={ stack.img } color={ stack.color } />
 				))
 				}
 				</StackCards>

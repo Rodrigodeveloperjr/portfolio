@@ -4,7 +4,7 @@
 💻 Portfólio
 ============
 
-Projeto desenvolvido para os alunos da Kenzie Academy Brasil, com a finalidade de fornecer um portfólio profissional demonstrando de forma objetiva suas capacidades de técnicas e resolução de problemas, por meio de uma interface simples, moderna e intuitiva.
+Esse é o meu portfólio profissional demonstrando de forma objetiva minhas capacidades de técnicas e resolução de problemas, por meio de uma interface simples, moderna e intuitiva.
 
   
   
@@ -14,16 +14,24 @@ Projeto desenvolvido para os alunos da Kenzie Academy Brasil, com a finalidade d
   
   
 
-🎲 Utilizando projeto
+🎲 Utilizando o portfólio
 ---------------------
 
-### ▪️ Baixando projeto e instalando dependências
+### ▪️ Baixando portfólio e instalando dependências
 
-Para utilizar o projeto basta fazer o fork do repositório em computador e ao baixar realizar o download das dependências do site com o comando: `yarn`
+Para utilizar o projeto basta fazer o fork do repositório em computador e ao baixar realizar o download das dependências do portfólio com o comando:
 
-### ▪️ Iniciando visualização do projeto
+```
+yarn
+```
 
-Ao finalizar o download das dependências, inicie a visualização do projeto em ambiente de desenvolvimento com o comando: `yarn dev`
+### ▪️ Iniciando visualização do portfólio
+
+Ao finalizar o download das dependências, inicie a visualização do projeto em ambiente de desenvolvimento com o comando:
+
+```
+yarn dev
+```
 
   
   
@@ -33,7 +41,7 @@ Ao finalizar o download das dependências, inicie a visualização do projeto em
 🗂 Estrutura de pastas
 ----------------------
 
-Todas as pastas são comuns de um projeto React, porém queremos chamar atenção para alguns arquivos que são fundamentais para a customização das informações no site
+Todas as pastas são comuns de um projeto React, porém quero chamar atenção para alguns arquivos que são fundamentais para a customização das informações no portfólio
 
 Segue as informações sobre cada um:
 
@@ -47,8 +55,12 @@ Segue as informações sobre cada um:
         
         *   **nameUser:** _Nome que aparecerá como logotipo da página, bem como em outras seções onde existe alguma apresentação pessoal_
             
-        *   **githubUser:** _Essa informação é bastante importante para que os repositórios sejam exibidos, bem como o link do seu github e a imagem de perfil que ficará disponível na página_
+        *   **githubUser:** _Essa informação é bastante importante para que os repositórios sejam exibidos, bem como o link do seu github e a imagem de perfil que ficará disponível na portfólio_
             
         *   **linkedinUser:** _Inserindo o usuário do seu linkedin será gerado um link para que os usuários acessem seu LinkedIn_
             
         *   **whatsappNumber:** _Nessa propriedade você precisará inserir seu DDD junto com o seu número do whatsapp, assim quem clicar no link "whatsapp" irá ser enviado para o seu contato já com uma mensagem pré-definida_
+
+        *   **emailUser:** _Nessa propriedade você precisará inserir seu email, assim quem clicar no link "email" irá abrir uma tela para mandar uma mensagem pelo email_
+
+        *   **instagramUser:** _Nessa propriedade você precisará inserir nome de usuário do instagram o famoso '@', assim quem clicar na imagem do instagram no footer do portfólio você irá ser enviado para o meu perfil do instagram (já segue lá)_

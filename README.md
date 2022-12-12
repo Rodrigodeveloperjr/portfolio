@@ -64,3 +64,15 @@ Segue as informações sobre cada um:
         *   **emailUser:** _Nessa propriedade você precisará inserir seu email, assim quem clicar no link "email" irá abrir uma tela para mandar uma mensagem pelo email_
 
         *   **instagramUser:** _Nessa propriedade você precisará inserir nome de usuário do instagram o famoso '@', assim quem clicar na imagem do instagram no footer do portfólio você irá ser enviado para o meu perfil do instagram (já segue lá)_
+
+    *   **📄 stackData.ts**
+
+        _Nesse arquivo você pode fazer a troca das stacks ou adicionar mais no array **stackData** para mostrar no topo do portfólio_
+
+        *   **stackData** _Essa variável recebe um array com as stacks e dentro desse array você cria um objeto com as propriedades *title*, *img* e *color*_
+
+            *   **title** _Essa propriedade recebe o titulo ou nome da stack_
+
+            *   **img** _Essa propriedade recebe icon ou uma variável com o link de uma imagem de uma stack_
+
+            *   **color** _Essa propriedade recebe uma color em nome, #, rgb, rgba, hsl ou hsla_

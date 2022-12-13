@@ -69,10 +69,10 @@ Segue as informações sobre cada um:
 
         _Nesse arquivo você pode fazer a troca das stacks ou adicionar mais no array **stackData** para mostrar no topo do portfólio_
 
-        *   **stackData** _Essa variável recebe um array com as stacks e dentro desse array você cria um objeto com as propriedades *title*, *img* e *color*_
+        *   **stackData:** _Essa variável recebe um array com as stacks e dentro desse array você cria um objeto com as propriedades title, img e color_
 
-            *   **title** _Essa propriedade recebe o titulo ou nome da stack_
+            *   **title:** _Essa propriedade recebe o titulo ou nome da stack_
 
-            *   **img** _Essa propriedade recebe icon ou uma variável com o link de uma imagem de uma stack_
+            *   **img:** _Essa propriedade recebe icon ou uma variável com o link de uma imagem de uma stack_
 
-            *   **color** _Essa propriedade recebe uma color em nome, #, rgb, rgba, hsl ou hsla_
+            *   **color:** _Essa propriedade recebe uma color em nome, #, rgb, rgba, hsl ou hsla_

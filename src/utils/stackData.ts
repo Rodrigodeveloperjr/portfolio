@@ -1,4 +1,4 @@
-import { SiJavascript, SiStyledcomponents, SiPostgresql, SiTypescript, SiJest, SiMongodb, SiHeroku, SiRedux, SiJson, SiSwagger, SiVercel } from 'react-icons/si'
+import { SiJavascript, SiStyledcomponents, SiPostgresql, SiTypescript, SiJest, SiMongodb, SiHeroku, SiRedux, SiJson, SiSwagger, SiVercel, SiExpress, SiPrisma } from 'react-icons/si'
 import { FaReact, FaGithub, FaPython, FaDocker, FaNodeJs } from 'react-icons/fa'
 import { DiCss3, DiDjango, DiMysql } from 'react-icons/di'
 import { AiFillHtml5 } from 'react-icons/ai'
@@ -48,6 +48,16 @@ const stack_data = [
 	{
 		title: 'Node JS',
 		img: FaNodeJs,
+		color: '#21A366'
+	},
+	{
+		title: 'Express',
+		img: SiExpress,
+		color: '#000000'
+	},
+	{
+		title: 'Prisma',
+		img: SiPrisma,
 		color: '#21A366'
 	},
 	{
